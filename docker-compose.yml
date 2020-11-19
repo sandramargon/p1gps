@@ -4,7 +4,7 @@ services:
    image: sandramargon/p2gps:db 
    deploy:
     replicas: 1
-    resources: 
+    resources:
      limits:
       cpus: "0.15" 
       memory: 200M 
@@ -19,9 +19,9 @@ services:
    image: sandramargon/p2gps:order
    depends_on:
      - "mongo"
-   deploy: 
+   deploy:
     replicas: 1
-    resources: 
+    resources:
      limits:
       cpus: "0.3" 
       memory: 500M 
@@ -33,7 +33,7 @@ services:
    image: sandramargon/p2gps:web 
    deploy:
     replicas: 1
-    resources: 
+    resources:
      limits:
       cpus: "0.25" 
       memory: 300M 
